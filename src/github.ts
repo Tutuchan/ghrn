@@ -3,7 +3,7 @@ import {restEndpointMethods} from '@octokit/plugin-rest-endpoint-methods'
 import {ReviewNotification, NotificationsResponse} from './types'
 
 const OctokitWithRest = Octokit.plugin(restEndpointMethods)
-const octokit = new OctokitWithRest({auth: process.env.GITHUB_TOKEN})
+const octokit = new OctokitWithRest({auth: process.env.GHRN_TOKEN})
 
 function buildPullRequestURL(notificationUrl: string): string {
   return notificationUrl.replace('api.github.com/repos/', 'github.com/').replace('/pulls/', '/pull/')

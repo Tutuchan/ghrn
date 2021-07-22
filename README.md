@@ -16,14 +16,21 @@ Get desktop notifications for Github pull request reviews.
 npm install -g ghrn
 ```
 
+If using [asdf](https://asdf-vm.com/#/), you need to reshim `nodejs` to see the `ghrn` CLI.
+
+```bash
+asdf reshim nodejs
+```
+
 # Setup
 
 ![](docs/readme.png)
 
 1. Navigate to your Github settings,
 2. Create a Github personal token with the `notifications` scope
-3. Enable SSO if needed to access organizations' repos
-4. Navigate to your [notifications page](https://github.com/notifications?query=reason%3Areview-requested) and mark all current requests as read not to be spammed at the first execution
+3. Create a `GHRN_TOKEN` environment variable with this token as value
+4. Enable SSO if needed to access organizations' repos
+5. Navigate to your [notifications page](https://github.com/notifications?query=reason%3Areview-requested) and mark all current requests as read not to be spammed at the first execution
 
 For Mac users:
 
@@ -32,16 +39,19 @@ For Mac users:
 3. Choose the `Alerts` alert style, otherwise the notifications disappear after 5 seconds and they can't be clicked to reach the PR URL
 <!-- installationstop -->
 # Usage
-<!-- usage -->
-```sh-session
-$ npm install -g ghrn
-$ ghrn COMMAND
-running command...
-$ ghrn (-v|--version|version)
-ghrn/0.1.0 darwin-x64 node-v16.5.0
-$ ghrn --help [COMMAND]
+
+```bash
+$ ghrn --help
+Get notified for review requests
+
 USAGE
-  $ ghrn COMMAND
-...
+  $ ghrn
+
+OPTIONS
+  -f, --frequency=frequency  [default: 60] how often (in seconds) should notifications be checked
+  -h, --help                 show CLI help
+  -v, --version              show CLI version
+
 ```
-<!-- usagestop -->
+
+Running `ghrn` without any parameters will poll Github every 60 seconds for review requests as long as it keeps running.
