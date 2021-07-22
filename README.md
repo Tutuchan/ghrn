@@ -6,12 +6,10 @@ Get desktop notifications for Github pull request reviews.
 [![Version](https://img.shields.io/npm/v/ghrn.svg)](https://npmjs.org/package/ghrn)
 [![License](https://img.shields.io/npm/l/ghrn.svg)](https://github.com/Tutuchan/ghrn/blob/master/package.json)
 
-<!-- toc -->
-- [ghrn](#ghrn)
 - [Installation](#installation)
 - [Setup](#setup)
 - [Usage](#usage)
-<!-- tocstop -->
+
 # Installation
 <!-- installation -->
 ```bash
@@ -35,22 +33,15 @@ For Mac users:
 <!-- installationstop -->
 # Usage
 <!-- usage -->
-```bash
-ghrn --help
-Get notified for review requests
-
+```sh-session
+$ npm install -g ghrn
+$ ghrn COMMAND
+running command...
+$ ghrn (-v|--version|version)
+ghrn/0.1.0 darwin-x64 node-v16.5.0
+$ ghrn --help [COMMAND]
 USAGE
-  $ ghrn
-
-OPTIONS
-  -f, --frequency=frequency  [default: 60] how often (in seconds) should notifications be checked
-  -h, --help                 show CLI help
-  -v, --version              show CLI version
-```
-
-Running the command without any flags will poll Github every 60 seconds for new review requests.
-
-```bash
-ghrn
+  $ ghrn COMMAND
+...
 ```
 <!-- usagestop -->
