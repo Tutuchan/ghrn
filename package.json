@@ -1,7 +1,7 @@
 {
   "name": "ghrn",
   "description": "Get desktop notifications for Github pull request reviews.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Pierre Formont @Tutuchan",
   "bin": {
     "ghrn": "./bin/run"
