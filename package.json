@@ -1,0 +1,62 @@
+{
+  "name": "ghrn",
+  "description": "Get desktop notifications for Github pull request reviews.",
+  "version": "0.1.0",
+  "author": "Pierre Formont @Tutuchan",
+  "bin": {
+    "ghrn": "./bin/run"
+  },
+  "bugs": "https://github.com/Tutuchan/ghrn/issues",
+  "devDependencies": {
+    "@oclif/dev-cli": "^1.26.0",
+    "@oclif/test": "^1.2.8",
+    "@octokit/types": "^6.19.0",
+    "@types/chai": "^4.2.21",
+    "@types/mocha": "^5.2.7",
+    "@types/node": "^10.17.60",
+    "chai": "^4.3.4",
+    "eslint": "^5.16.0",
+    "eslint-config-oclif": "^3.1.0",
+    "eslint-config-oclif-typescript": "^0.1.0",
+    "mocha": "^5.2.0",
+    "nyc": "^14.1.1",
+    "ts-node": "^8.10.2",
+    "typescript": "^3.9.10"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "files": [
+    "/bin",
+    "/lib"
+  ],
+  "homepage": "https://github.com/Tutuchan/ghrn",
+  "keywords": [
+    "oclif"
+  ],
+  "license": "MIT",
+  "main": "lib/index.js",
+  "oclif": {
+    "bin": "ghrn"
+  },
+  "repository": "Tutuchan/ghrn",
+  "scripts": {
+    "posttest": "eslint . --ext .ts --config .eslintrc",
+    "prepack": "rm -rf lib && tsc -b && oclif-dev readme",
+    "test": "nyc --extension .ts mocha --forbid-only \"test/**/*.test.ts\"",
+    "version": "oclif-dev readme && git add README.md"
+  },
+  "types": "lib/index.d.ts",
+  "dependencies": {
+    "@oclif/command": "^1.8.0",
+    "@oclif/config": "^1.17.0",
+    "@oclif/plugin-help": "^3.2.2",
+    "@types/node-notifier": "^8.0.1",
+    "dayjs": "^1.10.6",
+    "dotenv": "^10.0.0",
+    "node-notifier": "^10.0.0",
+    "octokit": "^1.1.0",
+    "open": "^8.2.1",
+    "tslib": "^1.14.1"
+  }
+}
