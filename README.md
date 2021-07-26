@@ -26,13 +26,18 @@ asdf reshim nodejs
 
 ![](docs/readme.png)
 
+## Prerequisites
+
 1. Navigate to your Github settings,
 2. Create a Github personal token with the `notifications` scope
-3. Create a `GHRN_TOKEN` environment variable with this token as value
-4. Enable SSO if needed to access organizations' repos
-5. Navigate to your [notifications page](https://github.com/notifications?query=reason%3Areview-requested) and mark all current requests as read not to be spammed at the first execution
+3. Enable SSO if needed to access organizations' repos
+4. Create a `GHRN_TOKEN` environment variable with the token created in step 2 as value
 
-For Mac users:
+## Clear your notifications
+
+:warning: **Navigate to your [notifications page](https://github.com/notifications?query=reason%3Areview-requested) and mark all current requests as read not to be spammed at the first execution** :warning: 
+
+## For Mac users
 
 1. The first time `ghrn` runs, you will be asked to allow Desktop notifications
 2. Go to *System preferences > Notifications* and look for **terminal-notifier**
